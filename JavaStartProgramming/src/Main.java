@@ -5,33 +5,15 @@ public class Main
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        /*double F, C;
-        System.out.println("Please enter temperature in Fahrenheit's degrees");
-        F = scanner.nextDouble();
-        C = (double)5 / 9 * (F-32);
-        System.out.println(C);*/
-
-//        final int PCs = 24;
-//        int students;
-//        double result;
-//        System.out.printf("Enter the number of students: ");
-//        students = scanner.nextInt();
-//        result = (double)students / PCs;
-//        System.out.println("The result is: " + result);
-
-        double age, money;
-        boolean cinema;
-        System.out.printf("Enter the age: ");
-        age = scanner.nextDouble();
-        System.out.printf("How much money do you have?: ");
-        money = scanner.nextDouble();
-        cinema = (age >= 18 && money >= 20);
-        System.out.println("The result is: " + cinema);
-
-
-
-
-
-
+        //2.1
+        double celsius, fahrenheit;
+        System.out.print("Enter the temperature in Celsius's degrees: ");
+        celsius = scanner.nextDouble();
+        fahrenheit = 32 + ((double)9/5 * celsius);
+        int round = (int)Math.pow(10, 2);
+        fahrenheit *= round;
+        fahrenheit = Math.round(fahrenheit);
+        fahrenheit /= round;
+        System.out.println("The temperature in Fahrenheit degrees is: " + fahrenheit);
     }
 }
