@@ -5,43 +5,37 @@ public class Main
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-//        2.1
-        System.out.println("Exercise 2.1");
-        double celsius, fahrenheit;
-        System.out.print("Enter the temperature in Celsius's degrees: ");
-        celsius = scanner.nextDouble();
-        fahrenheit = 32 + ((double)9/5 * celsius);
-        int round = (int)Math.pow(10, 2);
-        fahrenheit *= round;
-        fahrenheit = Math.round(fahrenheit);
-        fahrenheit /= round;
-        System.out.println("The temperature in Fahrenheit degrees is: " + fahrenheit);
-        System.out.println("");
 
-//        2.2
-        System.out.println("Exercise 2.2");
-        System.out.print("Enter the coefficient a: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter the coefficient b: ");
-        double b = scanner.nextDouble();
-        System.out.print("Enter the coefficient c: ");
-        double c = scanner.nextDouble();
+//        3a
+        System.out.println("Please enter any integer: ");
+        int numberX = scanner.nextInt();
 
-        double delta = Math.pow(b, 2) - (4 * a * c);
-        System.out.println("The result of delta is: " + delta);
-        System.out.println("");
+        if (numberX % 2 == 0){
+            System.out.println("Your number (" + numberX + ") is an even number.");
+        }
+        else{
+            System.out.println("Your number (" + numberX + ") is not an even number.");
+        }
+        if (numberX < 0){
+            System.out.println("Your number (" + numberX + ") is a negative number.");
+        }
+        else {
+            System.out.println("Your number (" + numberX + ") is a positive number.");
+        }
 
-//        2.3
-        System.out.print("Enter your weight (in kilogram): ");
-        double weight = scanner.nextDouble();
-        System.out.print("Enter your height (in meters): ");
-        double height = scanner.nextDouble();
-        double BMI = weight / Math.pow(height, 2);
+//        3b
+        System.out.println("Please enter two any integer.");
+        System.out.print("First integer: ");
+        int numberOne = scanner.nextInt();
+        System.out.print("Second integer: ");
+        int numberTwo = scanner.nextInt();
 
-        System.out.println("The result of Your BMI is: " + BMI);
-        System.out.println("");
-
-
-
+        if (numberOne <= numberTwo){
+            for (int i = 0; i <= numberTwo; i++){
+                if (i % 2 == 0){
+                    System.out.print(i + ", ");
+                }
+            }
+        }
     }
 }
